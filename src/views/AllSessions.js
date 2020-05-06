@@ -32,7 +32,7 @@ import CustomFileUpload from "../components/components-overview/CustomFileUpload
 import DropdownInputGroups from "../components/components-overview/DropdownInputGroups";
 import CustomSelect from "../components/components-overview/CustomSelect";
 
-const ComponentsOverview = () => (
+const AllSessions = () => (
   <div>
     <Container fluid className="px-0">
       <Alert className="mb-0">
@@ -183,4 +183,4 @@ const ComponentsOverview = () => (
   </div>
 );
 
-export default ComponentsOverview;
+export default AllSessions;

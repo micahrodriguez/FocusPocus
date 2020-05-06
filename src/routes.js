@@ -5,13 +5,13 @@ import { Redirect } from "react-router-dom";
 import { DefaultLayout } from "./layouts";
 
 // Route Views
-import BlogOverview from "./views/BlogOverview";
-import UserProfileLite from "./views/UserProfileLite";
-import AddNewPost from "./views/AddNewPost";
+import Overview from "./views/Overview";
+import UserProfile from "./views/UserProfile";
+import AddNewSession from "./views/AddNewSession";
 import Errors from "./views/Errors";
-import ComponentsOverview from "./views/ComponentsOverview";
-import Tables from "./views/Tables";
-import BlogPosts from "./views/BlogPosts";
+import AllSessions from "./views/AllSessions";
+import Compare from "./views/Compare";
+import Supplements from "./views/Supplements";
 
 export default [
   {
@@ -23,17 +23,17 @@ export default [
   {
     path: "/overview",
     layout: DefaultLayout,
-    component: BlogOverview
+    component: Overview
   },
   {
     path: "/user-profile",
     layout: DefaultLayout,
-    component: UserProfileLite
+    component: UserProfile
   },
   {
     path: "/add-new-session",
     layout: DefaultLayout,
-    component: AddNewPost
+    component: AddNewSession
   },
   {
     path: "/errors",
@@ -43,16 +43,16 @@ export default [
   {
     path: "/all-sessions",
     layout: DefaultLayout,
-    component: ComponentsOverview
+    component: AllSessions
   },
   {
     path: "/compare",
     layout: DefaultLayout,
-    component: Tables
+    component: Compare
   },
   {
     path: "/supplements",
     layout: DefaultLayout,
-    component: BlogPosts
+    component: Supplements
   }
 ];

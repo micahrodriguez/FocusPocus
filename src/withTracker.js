@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GoogleAnalytics from "react-ga";
 
+// TODO: Change tracking code or maybe disable?
 GoogleAnalytics.initialize(process.env.REACT_APP_GAID || "UA-115105611-2");
 
 const withTracker = (WrappedComponent, options = {}) => {
