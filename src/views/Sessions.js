@@ -6,7 +6,7 @@ import Editor from "../components/add-new-post/Editor";
 import SidebarActions from "../components/add-new-post/SidebarActions";
 import SidebarCategories from "../components/add-new-post/SidebarCategories";
 
-const AddNewSession = () => (
+const Sessions = () => (
   <Container fluid className="main-content-container px-4 pb-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
@@ -28,4 +28,4 @@ const AddNewSession = () => (
   </Container>
 );
 
-export default AddNewSession;
+export default Sessions;

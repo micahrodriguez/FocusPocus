@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button } from "shards-react";
 
-const Errors = () => (
+const Settings = () => (
   <Container fluid className="main-content-container px-4 pb-4">
     <div className="error">
       <div className="error__content">
@@ -14,4 +14,4 @@ const Errors = () => (
   </Container>
 );
 
-export default Errors;
+export default Settings;

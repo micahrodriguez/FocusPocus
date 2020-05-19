@@ -7,34 +7,34 @@ export default function() {
       htmlAfter: ""
     },
     {
-      title: "Add New Session",
+      title: "Analyze",
+      htmlBefore: '<i class="material-icons">compare</i>',
+      to: "/compare",
+    },
+    {
+      title: "Record",
+      htmlBefore: '<i class="material-icons">headset</i>',
+      to: "/all-sessions",
+    },
+    {
+      title: "Sessions",
       htmlBefore: '<i class="material-icons">note_add</i>',
       to: "/add-new-session",
     },
     {
-      title: "All Sessions",
-      htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/all-sessions",
-    },
-    {
-      title: "Compare",
-      htmlBefore: '<i class="material-icons">table_chart</i>',
-      to: "/compare",
-    },
-    {
       title: "Supplements",
-      htmlBefore: '<i class="material-icons">vertical_split</i>',
+      htmlBefore: '<i class="material-icons">local_drink</i>',
       to: "/supplements",
     },
     {
-      title: "User Profile",
+      title: "Account",
       htmlBefore: '<i class="material-icons">person</i>',
       to: "/user-profile",
     },
     {
-      title: "Errors",
-      htmlBefore: '<i class="material-icons">error</i>',
-      to: "/errors",
+      title: "Settings",
+      htmlBefore: '<i class="material-icons">settings</i>',
+      to: "/settings",
     }
   ];
 }

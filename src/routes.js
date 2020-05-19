@@ -7,8 +7,8 @@ import { DefaultLayout } from "./layouts";
 // Route Views
 import Overview from "./views/Overview";
 import UserProfile from "./views/UserProfile";
-import AddNewSession from "./views/AddNewSession";
-import Errors from "./views/Errors";
+import Sessions from "./views/Sessions";
+import Settings from "./views/Settings";
 import AllSessions from "./views/AllSessions";
 import Compare from "./views/Compare";
 import Supplements from "./views/Supplements";
@@ -33,12 +33,12 @@ export default [
   {
     path: "/add-new-session",
     layout: DefaultLayout,
-    component: AddNewSession
+    component: Sessions
   },
   {
-    path: "/errors",
+    path: "/settings",
     layout: DefaultLayout,
-    component: Errors
+    component: Settings
   },
   {
     path: "/all-sessions",
