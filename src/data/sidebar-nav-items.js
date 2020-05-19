@@ -9,17 +9,17 @@ export default function() {
     {
       title: "Analyze",
       htmlBefore: '<i class="material-icons">compare</i>',
-      to: "/compare",
+      to: "/analyze",
     },
     {
       title: "Record",
       htmlBefore: '<i class="material-icons">headset</i>',
-      to: "/all-sessions",
+      to: "/record",
     },
     {
       title: "Sessions",
       htmlBefore: '<i class="material-icons">note_add</i>',
-      to: "/add-new-session",
+      to: "/sessions",
     },
     {
       title: "Supplements",
@@ -29,7 +29,7 @@ export default function() {
     {
       title: "Account",
       htmlBefore: '<i class="material-icons">person</i>',
-      to: "/user-profile",
+      to: "/account",
     },
     {
       title: "Settings",

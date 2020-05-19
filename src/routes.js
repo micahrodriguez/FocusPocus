@@ -6,11 +6,11 @@ import { DefaultLayout } from "./layouts";
 
 // Route Views
 import Overview from "./views/Overview";
-import UserProfile from "./views/UserProfile";
-import Sessions from "./views/Sessions";
+import Analyze from "./views/Analyze";
+import Record from "./views/Record";
 import Settings from "./views/Settings";
-import AllSessions from "./views/AllSessions";
-import Compare from "./views/Compare";
+import Sessions from "./views/Sessions";
+import Account from "./views/Account";
 import Supplements from "./views/Supplements";
 
 export default [
@@ -26,33 +26,33 @@ export default [
     component: Overview
   },
   {
-    path: "/user-profile",
+    path: "/analyze",
     layout: DefaultLayout,
-    component: UserProfile
+    component: Analyze
   },
   {
-    path: "/add-new-session",
+    path: "/record",
+    layout: DefaultLayout,
+    component: Record
+  },
+  {
+    path: "/sessions",
     layout: DefaultLayout,
     component: Sessions
+  },
+  {
+    path: "/supplements",
+    layout: DefaultLayout,
+    component: Supplements
+  },
+  {
+    path: "/account",
+    layout: DefaultLayout,
+    component: Account
   },
   {
     path: "/settings",
     layout: DefaultLayout,
     component: Settings
   },
-  {
-    path: "/all-sessions",
-    layout: DefaultLayout,
-    component: AllSessions
-  },
-  {
-    path: "/compare",
-    layout: DefaultLayout,
-    component: Compare
-  },
-  {
-    path: "/supplements",
-    layout: DefaultLayout,
-    component: Supplements
-  }
 ];

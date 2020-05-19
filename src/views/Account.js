@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, CardHeader, CardBody } from "shards-react";
 
 import PageTitle from "../components/common/PageTitle";
 
-const Compare = () => (
+const Account = () => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
@@ -154,4 +154,4 @@ const Compare = () => (
   </Container>
 );
 
-export default Compare;
+export default Account;
