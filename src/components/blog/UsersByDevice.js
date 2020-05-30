@@ -55,7 +55,7 @@ class UsersByDevice extends React.Component {
         </CardHeader>
         <CardBody className="d-flex py-0">
           <canvas
-            height="220"
+            height="100" // Graph size?
             ref={this.canvasRef}
             className="blog-users-by-device m-auto"
           />
@@ -111,15 +111,14 @@ UsersByDevice.defaultProps = {
     datasets: [
       {
         hoverBorderColor: "#ffffff",
-        data: [68.3, 24.2, 7.5],
+        data: [50.0, 50.0],   // TODO: Integrate productivity data here
         backgroundColor: [
           "rgba(0,123,255,0.9)",
-          "rgba(0,123,255,0.5)",
-          "rgba(0,123,255,0.3)"
+          "rgba(255,0,0,0.5)"
         ]
       }
     ],
-    labels: ["Desktop", "Tablet", "Mobile"]
+    labels: ["Concentration", "Distraction"]
   }
 };
 

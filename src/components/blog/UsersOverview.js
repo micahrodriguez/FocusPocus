@@ -85,6 +85,18 @@ class UsersOverview extends React.Component {
     BlogUsersOverview.render();
   }
 
+  handleUpdate() {
+    /*
+    TODO: Implement a callback function handling the change in
+     state of the session selector (with respect to the graph data in
+     UsersOverview.defaultProps or something like that).
+
+     See https://towardsdatascience.com/passing-data-between-react-components-parent-children-siblings-a64f89e24ecf
+     (2. From Child to Parent Using Callbacks).
+    */
+    return 0;
+  }
+
   render() {
     const { title } = this.props;
     return (
