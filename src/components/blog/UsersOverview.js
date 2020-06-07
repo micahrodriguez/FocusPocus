@@ -145,7 +145,7 @@ UsersOverview.propTypes = {
 };
 
 UsersOverview.defaultProps = {
-  title: "Users Overview",
+  title: "Time vs Productivity",
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
     datasets: [

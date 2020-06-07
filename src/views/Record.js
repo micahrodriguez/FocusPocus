@@ -16,7 +16,7 @@ const Record = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Productivity Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
+      <PageTitle title="Record" subtitle="Live Recording with Muse" className="text-sm-left mb-3" />
     </Row>
 
     <Row>

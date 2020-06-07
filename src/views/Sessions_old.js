@@ -32,7 +32,7 @@ import CustomFileUpload from "../components/components-overview/CustomFileUpload
 import DropdownInputGroups from "../components/components-overview/DropdownInputGroups";
 import CustomSelect from "../components/components-overview/CustomSelect";
 
-const Account = () => (
+const Sessions = () => (
   <div>
     <Container fluid className="px-0">
       <Alert className="mb-0">
@@ -43,8 +43,8 @@ const Account = () => (
       <Row noGutters className="page-header py-4">
         <PageTitle
           sm="4"
-          title="TODO: User's name"
-          subtitle="Account"
+          title="Sessions"
+          subtitle="Add / Remove / Edit Sessions"
           className="text-sm-left"
         />
       </Row>
@@ -183,4 +183,4 @@ const Account = () => (
   </div>
 );
 
-export default Account;
+export default Sessions;
