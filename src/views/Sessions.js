@@ -37,7 +37,8 @@ const Sessions = () => (
   <div>
     <Container fluid className="px-0">
       <Alert className="mb-0">
-        <i className="fa fa-info mx-2"></i> If you already have a CSV file recorded from (TODO: put muse recording website), you can add it here.
+        <i className="fa fa-info mx-2"></i> If you already have a CSV file recorded from (TODO: put muse recording
+        website), you can add it here.
       </Alert>
     </Container>
     <Container fluid className="main-content-container px-4">
@@ -63,17 +64,17 @@ const Sessions = () => (
                 <strong className="text-muted d-block mb-2">
                   Custom File Upload
                 </strong>
-                <CustomFileUpload />
+                <CustomFileUpload/>
 
                 <strong className="text-muted d-block mb-2">
                   Dropdown Input Groups
                 </strong>
-                <DropdownInputGroups />
+                <DropdownInputGroups/>
 
                 <strong className="text-muted d-block mb-2">
                   Custom Select
                 </strong>
-                <CustomSelect />
+                <CustomSelect/>
               </ListGroupItem>
             </ListGroup>
           </Card>
@@ -81,15 +82,15 @@ const Sessions = () => (
       </Row>
 
       {/* Default Light Table */}
-    <Row>
-      <Col>
-        <Card small className="mb-4">
-          <CardHeader className="border-bottom">
-            <h6 className="m-0">Active Users</h6>
-          </CardHeader>
-          <CardBody className="p-0 pb-3">
-            <table className="table mb-0">
-              <thead className="bg-light">
+      <Row>
+        <Col>
+          <Card small className="mb-4">
+            <CardHeader className="border-bottom">
+              <h6 className="m-0">Active Users</h6>
+            </CardHeader>
+            <CardBody className="p-0 pb-3">
+              <table className="table mb-0">
+                <thead className="bg-light">
                 <tr>
                   <th scope="col" className="border-0">
                     #
@@ -110,8 +111,8 @@ const Sessions = () => (
                     Phone
                   </th>
                 </tr>
-              </thead>
-              <tbody>
+                </thead>
+                <tbody>
                 <tr>
                   <td>1</td>
                   <td>Ali</td>
@@ -144,12 +145,12 @@ const Sessions = () => (
                   <td>Bad Hersfeld</td>
                   <td>1-848-473-7416</td>
                 </tr>
-              </tbody>
-            </table>
-          </CardBody>
-        </Card>
-      </Col>
-    </Row>
+                </tbody>
+              </table>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   </div>
 );

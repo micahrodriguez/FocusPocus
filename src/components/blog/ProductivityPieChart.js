@@ -12,10 +12,18 @@ import {
 
 import Chart from "../../utils/chart";
 
-class UsersByDevice extends React.Component {
+
+/**
+ * Represents a pie chart.
+ *
+ * Has one half showing "concentration" and the other showing
+ * "distraction."
+ *
+ * TODO: Implement a way to make data updating easier.
+ */
+class ProductivityPieChart extends React.Component {
   constructor(props) {
     super(props);
-
     this.canvasRef = React.createRef();
   }
 
@@ -47,7 +55,7 @@ class UsersByDevice extends React.Component {
   }
 
   render() {
-    const { title } = this.props;
+    const {title} = this.props;
     return (
       <Card small className="h-100">
         <CardHeader className="border-bottom">
@@ -66,8 +74,9 @@ class UsersByDevice extends React.Component {
               <FormSelect
                 size="sm"
                 value="last-week"
-                style={{ maxWidth: "130px" }}
-                onChange={() => {}}
+                style={{maxWidth: "130px"}}
+                onChange={() => {
+                }}
               >
                 <option value="last-week">Last Week</option>
                 <option value="today">Today</option>
@@ -86,7 +95,7 @@ class UsersByDevice extends React.Component {
   }
 }
 
-UsersByDevice.propTypes = {
+ProductivityPieChart.propTypes = {
   /**
    * The component's title.
    */
@@ -105,7 +114,7 @@ UsersByDevice.propTypes = {
   chartData: PropTypes.object
 };
 
-UsersByDevice.defaultProps = {
+ProductivityPieChart.defaultProps = {
   title: "Average Concentration",
   chartData: {
     datasets: [
@@ -122,4 +131,4 @@ UsersByDevice.defaultProps = {
   }
 };
 
-export default UsersByDevice;
+export default ProductivityPieChart;

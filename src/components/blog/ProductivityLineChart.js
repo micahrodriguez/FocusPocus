@@ -1,14 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
+import {Row, Col, Card, CardHeader, CardBody, Button} from "shards-react";
 
 import RangeDatePicker from "../common/RangeDatePicker";
 import Chart from "../../utils/chart";
 
-class UsersOverview extends React.Component {
+/**
+ * Represents a line chart of productivity over time.
+ *
+ * TODO: Implement an easier way to change data displayed.
+ */
+class ProductivityLineChart extends React.Component {
   constructor(props) {
     super(props);
-
     this.canvasRef = React.createRef();
   }
 
@@ -78,8 +82,8 @@ class UsersOverview extends React.Component {
     const buoMeta = BlogUsersOverview.getDatasetMeta(0);
     buoMeta.data[0]._model.radius = 0;
     buoMeta.data[
-      this.props.chartData.datasets[0].data.length - 1
-    ]._model.radius = 0;
+    this.props.chartData.datasets[0].data.length - 1
+      ]._model.radius = 0;
 
     // Render the chart.
     BlogUsersOverview.render();
@@ -98,7 +102,7 @@ class UsersOverview extends React.Component {
   }
 
   render() {
-    const { title } = this.props;
+    const {title} = this.props;
     return (
       <Card small className="h-100">
         <CardHeader className="border-bottom">
@@ -107,7 +111,7 @@ class UsersOverview extends React.Component {
         <CardBody className="pt-0">
           <Row className="border-bottom py-2 bg-light">
             <Col sm="6" className="d-flex mb-2 mb-sm-0">
-              <RangeDatePicker />
+              <RangeDatePicker/>
             </Col>
             <Col>
               <Button
@@ -121,7 +125,7 @@ class UsersOverview extends React.Component {
           <canvas
             height="120"
             ref={this.canvasRef}
-            style={{ maxWidth: "100% !important" }}
+            style={{maxWidth: "100% !important"}}
           />
         </CardBody>
       </Card>
@@ -129,7 +133,7 @@ class UsersOverview extends React.Component {
   }
 }
 
-UsersOverview.propTypes = {
+ProductivityLineChart.propTypes = {
   /**
    * The component's title.
    */
@@ -144,7 +148,7 @@ UsersOverview.propTypes = {
   chartOptions: PropTypes.object
 };
 
-UsersOverview.defaultProps = {
+ProductivityLineChart.defaultProps = {
   title: "Time vs Productivity",
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
@@ -241,4 +245,4 @@ UsersOverview.defaultProps = {
   }
 };
 
-export default UsersOverview;
+export default ProductivityLineChart;

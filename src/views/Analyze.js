@@ -4,7 +4,7 @@ import { Container, Row, Col } from "shards-react";
 
 import PageTitle from "./../components/common/PageTitle";
 import SmallStats from "./../components/common/SmallStats";
-import UsersOverview from "./../components/blog/UsersOverview";
+import ProductivityLineChart from "../components/blog/ProductivityLineChart";
 
 const Analyze = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
@@ -34,7 +34,7 @@ const Analyze = ({ smallStats }) => (
 
     <Row>
       <Col lg="12" md="12" sm="12" className="mb-4">
-        <UsersOverview />
+        <ProductivityLineChart />
       </Col>
     </Row>
   </Container>
