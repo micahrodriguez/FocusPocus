@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "80a2392761c6118621c7",
-    "url": "./static/css/main.bac603ce.chunk.css"
+    "revision": "85af7de4f3b468baa357",
+    "url": "./static/css/main.a55058ca.chunk.css"
   },
   {
-    "revision": "80a2392761c6118621c7",
-    "url": "./static/js/main.80a23927.chunk.js"
+    "revision": "85af7de4f3b468baa357",
+    "url": "./static/js/main.85af7de4.chunk.js"
   },
   {
-    "revision": "2f6bea24ab75a0d43c54",
-    "url": "./static/css/1.732969ad.chunk.css"
+    "revision": "f43527e72a5a6e9d0cfc",
+    "url": "./static/css/1.94b63259.chunk.css"
   },
   {
-    "revision": "2f6bea24ab75a0d43c54",
-    "url": "./static/js/1.2f6bea24.chunk.js"
+    "revision": "f43527e72a5a6e9d0cfc",
+    "url": "./static/js/1.f43527e7.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "./static/media/0.73476783.jpg"
   },
   {
-    "revision": "60a859917fe65ea1f9f070e0dc080c76",
-    "url": "./static/media/shards-dashboards-logo.60a85991.svg"
+    "revision": "ec17489126c94c0361552c10e5af9cfb",
+    "url": "./static/media/focuspocusmainlogo.ec174891.jpg"
   },
   {
     "revision": "ed986061ad9bf89c081724362956b134",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "./static/media/10.fe349e85.jpeg"
   },
   {
-    "revision": "83b469118eb01a85d18e55ec154448c9",
+    "revision": "32d33dbf4e2cd3c85de972655e52a706",
     "url": "./index.html"
   }
 ];

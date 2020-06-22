@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2020-06-21
+
+- Added a Flask backend to the project
+  - Start it by executing `./serve.sh`
+  - Moved React front-end to `client/`
+
 ## [1.1.0] - 2020-05-30
 
 - Refactored a number of things
