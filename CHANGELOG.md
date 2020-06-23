@@ -2,11 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2020-06-23
+
+- Implemented a basic login functionality
+  - Rough UI implemented at `/login` and `/registration`
+  - System records registrations and can login users
+  - No logout
+- Fixed a bug involving redirection issues
+
+
 ## [1.2.0] - 2020-06-21
 
 - Added a Flask backend to the project
   - Start it by executing `./serve.sh`
   - Moved React front-end to `client/`
+
 
 ## [1.1.0] - 2020-05-30
 

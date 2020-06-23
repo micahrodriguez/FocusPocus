@@ -3,12 +3,7 @@ import PropTypes from "prop-types";
 import {Container, Row, Col, Progress, ListGroupItem, Button} from "shards-react";
 
 import PageTitle from "./../components/common/PageTitle";
-import SmallStats from "./../components/common/SmallStats";
-import ProductivityLineChart from "../components/blog/ProductivityLineChart";
 import ProductivityPieChart from "../components/blog/ProductivityPieChart";
-import NewDraft from "./../components/blog/NewDraft";
-import Discussions from "./../components/blog/Discussions";
-import TopReferrals from "./../components/common/TopReferrals";
 import ProgressBars from "../components/components-overview/ProgressBars";
 import RecordButton from "../components/record/RecordButtons";
 
