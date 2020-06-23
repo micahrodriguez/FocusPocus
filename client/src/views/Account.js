@@ -36,7 +36,8 @@ const Account = () => (
   <div>
     <Container fluid className="px-0">
       <Alert className="mb-0">
-        <i className="fa fa-info mx-2"></i> How you doin'? I'm just a friendly, good-looking notification message and I come in all the colors you can see below. Pretty cool, huh?
+        <i className="fa fa-info mx-2"></i> How you doin'? I'm just a friendly, good-looking notification message and I
+        come in all the colors you can see below. Pretty cool, huh?
       </Alert>
     </Container>
     <Container fluid className="main-content-container px-4">
@@ -49,7 +50,7 @@ const Account = () => (
         />
       </Row>
 
-      <Colors />
+      <Colors/>
 
       <Row>
         <Col lg="8" className="mb-4">
@@ -61,9 +62,9 @@ const Account = () => (
             <ListGroup flush>
               <ListGroupItem className="p-0 px-3 pt-3">
                 <Row>
-                  <Checkboxes />
-                  <RadioButtons />
-                  <ToggleButtons />
+                  <Checkboxes/>
+                  <RadioButtons/>
+                  <ToggleButtons/>
                 </Row>
               </ListGroupItem>
 
@@ -71,12 +72,12 @@ const Account = () => (
                 <strong className="text-muted d-block my-2">
                   Small Buttons
                 </strong>
-                <SmallButtons />
+                <SmallButtons/>
 
                 <strong className="text-muted d-block my-2">
                   Small Outline Button
                 </strong>
-                <SmallOutlineButtons />
+                <SmallOutlineButtons/>
               </ListGroupItem>
 
               <ListGroupItem className="p-3">
@@ -84,20 +85,20 @@ const Account = () => (
                 <strong className="text-muted d-block my-2">
                   Normal Buttons
                 </strong>
-                <NormalButtons />
+                <NormalButtons/>
 
                 {/* Normal Outline Buttons */}
                 <strong className="text-muted d-block my-2">
                   Normal Outline Buttons
                 </strong>
-                <NormalOutlineButtons />
+                <NormalOutlineButtons/>
               </ListGroupItem>
 
               {/* Forms & Form Validation */}
               <ListGroupItem className="p-3">
                 <Row>
-                  <Forms />
-                  <FormValidation />
+                  <Forms/>
+                  <FormValidation/>
                 </Row>
               </ListGroupItem>
             </ListGroup>
@@ -108,7 +109,7 @@ const Account = () => (
             <CardHeader className="border-bottom">
               <h6 className="m-0">Form Example</h6>
             </CardHeader>
-            <CompleteFormExample />
+            <CompleteFormExample/>
           </Card>
         </Col>
 
@@ -119,8 +120,8 @@ const Account = () => (
               <h6 className="m-0">Sliders & Progress Bars</h6>
             </CardHeader>
             <ListGroup flush>
-              <ProgressBars />
-              <Sliders />
+              <ProgressBars/>
+              <Sliders/>
             </ListGroup>
           </Card>
 
@@ -136,17 +137,17 @@ const Account = () => (
                   <strong className="text-muted d-block mb-3">
                     Button Groups
                   </strong>
-                  <ButtonGroups />
+                  <ButtonGroups/>
 
                   <strong className="text-muted d-block mb-2">
                     Input Groups
                   </strong>
-                  <InputGroups />
+                  <InputGroups/>
 
                   <strong className="text-muted d-block mb-2">
                     Seamless Input Groups
                   </strong>
-                  <SeamlessInputGroups />
+                  <SeamlessInputGroups/>
                 </Form>
               </ListGroupItem>
             </ListGroup>
@@ -163,17 +164,17 @@ const Account = () => (
                 <strong className="text-muted d-block mb-2">
                   Custom File Upload
                 </strong>
-                <CustomFileUpload />
+                <CustomFileUpload/>
 
                 <strong className="text-muted d-block mb-2">
                   Dropdown Input Groups
                 </strong>
-                <DropdownInputGroups />
+                <DropdownInputGroups/>
 
                 <strong className="text-muted d-block mb-2">
                   Custom Select
                 </strong>
-                <CustomSelect />
+                <CustomSelect/>
               </ListGroupItem>
             </ListGroup>
           </Card>
