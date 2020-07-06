@@ -36,7 +36,7 @@ const Sessions = () => (
       </Row>
 
       <Row>
-        <Col lg="8" className="mb-4">
+        <Col lg="12" className="mb-4">
           <Card small>
             {/* Files & Dropdowns */}
             <CardHeader className="border-bottom">
