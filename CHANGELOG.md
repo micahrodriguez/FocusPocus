@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1] - 2020-10-03
+
+- Added `setup.sh`, a setup script to try to make running the project
+easier.
+
 ## [1.3.1] - 2020-07-06
 
 - In the middle of implementing a basic file upload capability.
