@@ -16,6 +16,7 @@ import PageTitle from "../components/common/PageTitle";
 import CustomFileUpload from "../components/components-overview/CustomFileUpload";
 import DropdownInputGroups from "../components/components-overview/DropdownInputGroups";
 import CustomSelect from "../components/components-overview/CustomSelect";
+import SessionUpload from "../components/components-overview/SessionUpload";
 
 const Sessions = () => (
   <div>
@@ -48,7 +49,8 @@ const Sessions = () => (
                 <strong className="text-muted d-block mb-2">
                   Custom File Upload
                 </strong>
-                <CustomFileUpload/>
+                // <CustomFileUpload/>
+                <SessionUpload/>
 
                 <strong className="text-muted d-block mb-2">
                   Dropdown Input Groups
