@@ -1,10 +1,13 @@
 import os
 
-from flask import Flask, jsonify, safe_join, send_from_directory
+from flask import Flask, jsonify, safe_join, send_from_directory, request, session
 from flask_cors import CORS
 
 from . import db
 from . import auth
+from . import utils
+
+from werkzeug.utils import secure_filename
 
 
 def create_app(test_config=None):
@@ -21,6 +24,7 @@ def create_app(test_config=None):
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
         STATIC_FOLDER='../../client/build/static',
+        DATA_FOLDER='../user_data'
     )
 
     if test_config is None:
@@ -48,6 +52,28 @@ def create_app(test_config=None):
         """Sample API route for data"""
         print(app.root_path)
         return jsonify([{'title': 'A'}, {'title': 'B'}])
+    
+    # File Upload Route
+    @app.route('/api/file', methods=['POST'])
+    def file_upload():
+        """Get File From Post Request Header """
+        # Check File Part
+        if 'file' not in request.files:
+            return jsonify({'has_error': True, 'error': 'no file part'})
+        # Check File Name
+        file = request.files['file']
+        if file.filename == '':
+            return jsonify({'has_error': True, 'error': 'no file name'})
+        # Save File
+        if file and check_file(file.filename):
+            # TODO: Determine File Name Schema
+            file_name = secure_filename(file.filename)
+            # TODO: Determine User Data Schema
+            file_path = os.path.join(app.config['DATA_FOLDER'], session.get('user_id'))
+            if not os.exists(file_path):
+                os.makedirs(file_path)
+            file.save(os.path.join(file_path, file_name))
+            return jsonify({'has_error': False, 'error': ''})
 
     # Static routes
     @app.route('/static/<path:filename>', methods=['GET'])
