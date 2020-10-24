@@ -2,7 +2,7 @@
 
 # Rebuild the website
 cd client || (echo "FATAL ERROR: Failed to cd to client" && exit)
-yarn run build
+npm run build
 cd ..
 
 # Start the server in a virtual environment

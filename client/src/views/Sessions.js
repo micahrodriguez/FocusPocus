@@ -49,7 +49,7 @@ const Sessions = () => (
                 <strong className="text-muted d-block mb-2">
                   Custom File Upload
                 </strong>
-                // <CustomFileUpload/>
+                <CustomFileUpload/>
                 <SessionUpload/>
 
                 <strong className="text-muted d-block mb-2">

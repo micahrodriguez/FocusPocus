@@ -105,8 +105,17 @@
 // );
 
 import React from "react";
+import $ from "jquery";
 
 class SessionUpload extends React.Component {
+
+  constructor(props) {
+    super(props);
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+  }
 
   render() {
     return (
@@ -119,10 +128,6 @@ class SessionUpload extends React.Component {
     )
   }
 
-  $(".custom-file-input").on("change", function() {
-    var fileName = $(this).val().split("\\").pop();
-    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-  });
 }
 
 export default SessionUpload;

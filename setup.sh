@@ -14,12 +14,12 @@ else
     echo "ERROR: npm not found"
     exit 1
 fi
-if command -v yarn >/dev/null 2>&1 ; then
-    echo "yarn ($(yarn -v)) found"
-else
-    echo "ERROR: yarn not found"
-    exit 1
-fi
+# if command -v yarn >/dev/null 2>&1 ; then
+#     echo "yarn ($(yarn -v)) found"
+# else
+#     echo "ERROR: yarn not found"
+#     exit 1
+# fi
 if command -v python3 >/dev/null 2>&1 ; then
     echo "python3 ($(python3 --version)) found"
 else
