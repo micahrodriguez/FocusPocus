@@ -17,6 +17,7 @@ import CustomFileUpload from "../components/components-overview/CustomFileUpload
 import DropdownInputGroups from "../components/components-overview/DropdownInputGroups";
 import CustomSelect from "../components/components-overview/CustomSelect";
 import SessionUpload from "../components/components-overview/SessionUpload";
+import DateTimePicker from "../components/components-overview/DateTimePicker";
 
 const Sessions = () => (
   <div>
@@ -47,10 +48,14 @@ const Sessions = () => (
             <ListGroup flush>
               <ListGroupItem className="px-3">
                 <strong className="text-muted d-block mb-2">
-                  Custom File Upload
+                  Session File Upload
                 </strong>
-                <CustomFileUpload/>
                 <SessionUpload/>
+
+                <strong className="text-muted d-block mb-2">
+                  Session Date & Time
+                </strong>
+                <DateTimePicker/>
 
                 <strong className="text-muted d-block mb-2">
                   Dropdown Input Groups

@@ -119,15 +119,24 @@ class SessionUpload extends React.Component {
 
   render() {
     return (
-      <form>
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" id="customFile"/>
-          <label class="custom-file-label" for="customFile">Choose file</label>
+      <div>
+        <form>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile"/>
+            <label class="custom-file-label" for="customFile">Choose file</label>
+          </div>
+        </form>
+        <div class="form-group">
+          <label for="session-name">Session Name:</label>
+          <input type="text" class="form-control" id="session-name"/>
         </div>
-      </form>
+        <div class="form-group">
+          <label for="session-description">Session Description:</label>
+          <textarea class="form-control" rows="3" id="session-description"/>
+        </div>
+      </div>
     )
   }
-
 }
 
 export default SessionUpload;
