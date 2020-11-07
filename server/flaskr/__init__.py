@@ -9,6 +9,15 @@ from . import utils
 
 from werkzeug.utils import secure_filename
 
+ALLOWED_EXTENSIONS = {'txt', 'csv'}
+"""set: Allowed extensions to files being uploaded."""
+
+
+def _ALLOWED_FILE(filename: str) -> bool:
+    """Determines if a filename is allowed or not."""
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 def create_app(test_config=None):
     # = = = = = = = = = = = = = = = = = = = =
@@ -39,8 +48,6 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
-
-
 
     # = = = = = = = = = = = = = = = = = = = =
     # ROUTES
@@ -81,21 +88,18 @@ def create_app(test_config=None):
         """Return static resources."""
         return send_from_directory(app.config['STATIC_FOLDER'], filename)
 
+    # Index path
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
     def index(path):
-        """Return index.html for all non-api routes"""
-        #pylint: disable=unused-argument
+        """Return index.html for all non-API routes"""
+        # pylint: disable=unused-argument
         return send_from_directory(app.static_folder, 'index.html')
-    
-
 
     # = = = = = = = = = = = = = = = = = = = =
     # REGISTRATION
     # = = = = = = = = = = = = = = = = = = = =
     db.init_app(app)
     app.register_blueprint(auth.bp)
-
-
 
     return app
