@@ -9,16 +9,6 @@ from . import utils
 
 from werkzeug.utils import secure_filename
 
-ALLOWED_EXTENSIONS = {'txt', 'csv'}
-"""set: Allowed extensions to files being uploaded."""
-
-
-def _ALLOWED_FILE(filename: str) -> bool:
-    """Determines if a filename is allowed or not."""
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
 def create_app(test_config=None):
     # = = = = = = = = = = = = = = = = = = = =
     # SETUP
@@ -33,7 +23,7 @@ def create_app(test_config=None):
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
         STATIC_FOLDER='../../client/build/static',
-        DATA_FOLDER='../user_data'
+        DATA_FOLDER='./user_data/'
     )
 
     if test_config is None:
@@ -64,23 +54,32 @@ def create_app(test_config=None):
     @app.route('/api/file', methods=['POST'])
     def file_upload():
         """Get File From Post Request Header """
+        print(request.files)
         # Check File Part
         if 'file' not in request.files:
+            print("NO FILE")
             return jsonify({'has_error': True, 'error': 'no file part'})
         # Check File Name
         file = request.files['file']
+        date = request.form['date']
+        time = request.form['time']
+        print(file)
         if file.filename == '':
+            print("NO FILE NAME")
             return jsonify({'has_error': True, 'error': 'no file name'})
         # Save File
-        if file and check_file(file.filename):
-            # TODO: Determine File Name Schema
-            file_name = secure_filename(file.filename)
-            # TODO: Determine User Data Schema
-            file_path = os.path.join(app.config['DATA_FOLDER'], session.get('user_id'))
-            if not os.exists(file_path):
+        if file and utils.check_file(file.filename):
+            file_name = date + '_' + time + '_' + secure_filename(file.filename)
+            # TODO: Determine User Data Schema Replace null_usr
+            file_path = os.path.join(app.config['DATA_FOLDER'], 
+                str(session.get('user_id') or 'null_usr'))
+            print(os.path.join(file_path, file_name))
+            if not os.path.exists(file_path):
+                print("made")
                 os.makedirs(file_path)
             file.save(os.path.join(file_path, file_name))
             return jsonify({'has_error': False, 'error': ''})
+        return jsonify({'has_error': True, 'error': 'wrong file type'})
 
     # Static routes
     @app.route('/static/<path:filename>', methods=['GET'])

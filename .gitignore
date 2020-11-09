@@ -112,3 +112,6 @@ dist
 # IDE Files
 .idea/
 
+# Data Folder
+user_data/
+

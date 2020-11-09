@@ -42,32 +42,11 @@ const Sessions = () => (
           <Card small>
             {/* Files & Dropdowns */}
             <CardHeader className="border-bottom">
-              <h6 className="m-0">Files & Dropdowns</h6>
+              <h6 className="m-0">Session Upload</h6>
             </CardHeader>
-
-            <ListGroup flush>
-              <ListGroupItem className="px-3">
-                <strong className="text-muted d-block mb-2">
-                  Session File Upload
-                </strong>
-                <SessionUpload/>
-
-                <strong className="text-muted d-block mb-2">
-                  Session Date & Time
-                </strong>
-                <DateTimePicker/>
-
-                <strong className="text-muted d-block mb-2">
-                  Dropdown Input Groups
-                </strong>
-                <DropdownInputGroups/>
-
-                <strong className="text-muted d-block mb-2">
-                  Custom Select
-                </strong>
-                <CustomSelect/>
-              </ListGroupItem>
-            </ListGroup>
+            <Container className="px-3" style={{margin: 10}}>
+              <SessionUpload/>
+            </Container>
           </Card>
         </Col>
       </Row>
