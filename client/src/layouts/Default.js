@@ -37,8 +37,8 @@ DefaultLayout.propTypes = {
 };
 
 DefaultLayout.defaultProps = {
-  noNavbar: false,
-  noFooter: false
+  noNavbar: true,
+  noFooter: true,
 };
 
 export default DefaultLayout;

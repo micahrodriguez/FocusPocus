@@ -210,7 +210,7 @@ class SessionUpload extends React.Component {
           <DateTimePicker onChange={this.handle_date_change}/>
         </div>
         <div class="form-group">
-          <Button size="lg">{this.state.submit}</Button>
+          <Button>{this.state.submit}</Button>
         </div>
         </form>
       </div>
