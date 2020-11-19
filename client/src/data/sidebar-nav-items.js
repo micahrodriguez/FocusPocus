@@ -1,11 +1,11 @@
 export default function() {
   return [
-    {
+    /* {
       title: "Overview",
       to: "/overview",
       htmlBefore: '<i class="material-icons">edit</i>',
       htmlAfter: ""
-    },
+    }, */
     /* {
       title: "Analyze",
       htmlBefore: '<i class="material-icons">compare</i>',
