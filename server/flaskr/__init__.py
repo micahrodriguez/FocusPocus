@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, jsonify, safe_join, send_from_directory, request, session
 from flask_cors import CORS
+from flaskr.db import get_db
 
 from . import db
 from . import auth
@@ -26,6 +27,10 @@ def create_app(test_config=None):
         DATA_FOLDER='./user_data/'
     )
 
+    # Set Default User 
+    # TODO Implement log and register pages
+    user_id = 1
+
     if test_config is None:
         # Load the instance config, if it exists, when not testing
         app.config.from_pyfile('config.py', silent=True)
@@ -49,7 +54,18 @@ def create_app(test_config=None):
         """Sample API route for data"""
         print(app.root_path)
         return jsonify([{'title': 'A'}, {'title': 'B'}])
-    
+
+    # Session List Route
+    @app.route('/api/session_list')
+    def session_list():
+        """Get the set of sessions for current user"""
+        db = get_db()
+        sessions = db.execute('SELECT * FROM records WHERE owner_id = ?',
+                          (user_id, )).fetchall()
+        if sessions is None:
+            return jsonify({'has_error': True, 'error': 'no entries'})
+        return jsonify([dict(zip(r.keys(), r)) for r in sessions])
+
     # File Upload Route
     @app.route('/api/file', methods=['POST'])
     def file_upload():
@@ -63,21 +79,26 @@ def create_app(test_config=None):
         file = request.files['file']
         date = request.form['date']
         time = request.form['time']
+        act_type = request.form['act_type']
         print(file)
         if file.filename == '':
             print("NO FILE NAME")
             return jsonify({'has_error': True, 'error': 'no file name'})
         # Save File
         if file and utils.check_file(file.filename):
-            file_name = date + '_' + time + '_' + secure_filename(file.filename)
+            file_name = date[4:].replace('-', '') + '_' + time.replace(':', '') + '.csv'
             # TODO: Determine User Data Schema Replace null_usr
-            file_path = os.path.join(app.config['DATA_FOLDER'], 
-                str(session.get('user_id') or 'null_usr'))
+            file_path = os.path.join(app.config['DATA_FOLDER'], str(user_id))
             print(os.path.join(file_path, file_name))
             if not os.path.exists(file_path):
                 print("made")
                 os.makedirs(file_path)
             file.save(os.path.join(file_path, file_name))
+            # Save DB entry
+            db = get_db()
+            db.execute('INSERT INTO records (owner_id, activity_type, f_name) VALUES (?, ?, ?)',
+                       (user_id, act_type, file_name))
+            db.commit()
             return jsonify({'has_error': False, 'error': ''})
         return jsonify({'has_error': True, 'error': 'wrong file type'})
 

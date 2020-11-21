@@ -37,6 +37,16 @@ export const emptyBandData = {
   }
 };
 
+export const emptySessions = [
+  {
+    activity_type: "",
+    f_name: "",
+    id: "",
+    owner_id: "",
+    data: []
+  }
+]
+
 export const chartOptions = {
     scales: {
       xAxes: [
